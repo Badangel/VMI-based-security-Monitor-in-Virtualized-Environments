@@ -1,0 +1,124 @@
+apt-get install zlib1g-dev libglib2.0-dev libtool autoconf flex bison
+
+patch -p1 < ../kvm-qemu-2.4.0.1-libvmi.patch
+./configure --prefix=/usr --localstatedir=/var --sysconfdir=/etc
+
+root@dyf:/home/dyf/Downloads/qemu-2.8.0-rc0# ./configure
+Install prefix    /usr/local
+BIOS directory    /usr/local/share/qemu
+binary directory  /usr/local/bin
+library directory /usr/local/lib
+module directory  /usr/local/lib/qemu
+libexec directory /usr/local/libexec
+include directory /usr/local/include
+config directory  /usr/local/etc
+local state directory   /usr/local/var
+Manual directory  /usr/local/share/man
+ELF interp prefix /usr/gnemul/qemu-%M
+Source path       /home/dyf/Downloads/qemu-2.8.0-rc0
+C compiler        cc
+Host C compiler   cc
+C++ compiler      c++
+Objective-C compiler cc
+ARFLAGS           rv
+CFLAGS            -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -g 
+QEMU_CFLAGS       -I$(SRC_PATH)/pixman/pixman -I$(BUILD_DIR)/pixman/pixman  -pthread -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -fPIE -DPIE -m64 -mcx16 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -fwrapv  -Wendif-labels -Wmissing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong
+LDFLAGS           -Wl,--warn-common -Wl,-z,relro -Wl,-z,now -pie -m64 -g 
+make              make
+install           install
+python            python -B
+smbd              /usr/sbin/smbd
+module support    no
+host CPU          x86_64
+host big endian   no
+target list        aarch64-softmmu alpha-softmmu arm-softmmu cris-softmmu i386-softmmu lm32-softmmu m68k-softmmu microblaze-softmmu microblazeel-softmmu mips-softmmu mips64-softmmu mips64el-softmmu mipsel-softmmu moxie-softmmu or32-softmmu ppc-softmmu ppc64-softmmu ppcemb-softmmu s390x-softmmu sh4-softmmu sh4eb-softmmu sparc-softmmu sparc64-softmmu tricore-softmmu unicore32-softmmu x86_64-softmmu xtensa-softmmu xtensaeb-softmmu aarch64-linux-user alpha-linux-user arm-linux-user armeb-linux-user cris-linux-user i386-linux-user m68k-linux-user microblaze-linux-user microblazeel-linux-user mips-linux-user mips64-linux-user mips64el-linux-user mipsel-linux-user mipsn32-linux-user mipsn32el-linux-user or32-linux-user ppc-linux-user ppc64-linux-user ppc64abi32-linux-user ppc64le-linux-user s390x-linux-user sh4-linux-user sh4eb-linux-user sparc-linux-user sparc32plus-linux-user sparc64-linux-user tilegx-linux-user x86_64-linux-user
+tcg debug enabled no
+gprof enabled     no
+sparse enabled    no
+strip binaries    yes
+profiler          no
+static build      no
+pixman            internal
+SDL support       no 
+GTK support       no 
+GTK GL support    no
+VTE support       no 
+TLS priority      NORMAL
+GNUTLS support    no
+GNUTLS rnd        no
+libgcrypt         no
+libgcrypt kdf     no
+nettle            no 
+nettle kdf        no
+libtasn1          no
+curses support    no
+virgl support     no
+curl support      no
+mingw32 support   no
+Audio drivers     oss
+Block whitelist (rw) 
+Block whitelist (ro) 
+VirtFS support    no
+VNC support       yes
+VNC SASL support  no
+VNC JPEG support  no
+VNC PNG support   no
+xen support       no
+brlapi support    no
+bluez  support    no
+Documentation     no
+PIE               yes
+vde support       no
+netmap support    no
+Linux AIO support no
+ATTR/XATTR support yes
+Install blobs     yes
+KVM support       yes
+COLO support      yes
+RDMA support      no
+TCG interpreter   no
+fdt support       yes
+preadv support    yes
+fdatasync         yes
+madvise           yes
+posix_madvise     yes
+libcap-ng support no
+vhost-net support yes
+vhost-scsi support yes
+vhost-vsock support yes
+Trace backends    log
+spice support     no 
+rbd support       no
+xfsctl support    no
+smartcard support no
+libusb            no
+usb net redir     no
+OpenGL support    no
+OpenGL dmabufs    no
+libiscsi support  no
+libnfs support    no
+build guest agent yes
+QGA VSS support   no
+QGA w32 disk info no
+QGA MSI support   no
+seccomp support   no
+coroutine backend ucontext
+coroutine pool    yes
+debug stack usage no
+GlusterFS support no
+Archipelago support no
+gcov              gcov
+gcov enabled      no
+TPM support       yes
+libssh2 support   no
+TPM passthrough   yes
+QOM debugging     yes
+lzo support       no
+snappy support    no
+bzip2 support     no
+NUMA host support no
+tcmalloc support  no
+jemalloc support  no
+avx2 optimization yes
+replication support yes
+

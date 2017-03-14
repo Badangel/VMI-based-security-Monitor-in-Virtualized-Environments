@@ -1,0 +1,311 @@
+root@dyf:/home/dyf/Downloads/libvmi-master/tools/pyvmi# python setup.py build
+running build
+running build_ext
+building 'pyvmi' extension
+x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/usr/local/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/python2.7 -c pyvmi.c -o build/temp.linux-x86_64-2.7/pyvmi.o -I/usr/local/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+pyvmi.c: In function ‘pyvmi_init’:
+pyvmi.c:181:54: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+         char *domidstring = malloc(snprintf(NULL, 0, "domid-%u", domid)+1);
+                                                      ^
+pyvmi.c:181:54: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+pyvmi.c:182:30: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+         sprintf(domidstring, "domid-%u", domid);
+                              ^
+pyvmi.c: In function ‘pyvmi_get_vcpureg’:
+pyvmi.c:1311:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = RAX;
+             ^
+pyvmi.c:1315:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = RBX;
+             ^
+pyvmi.c:1319:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = RCX;
+             ^
+pyvmi.c:1323:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = RDX;
+             ^
+pyvmi.c:1327:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = RBP;
+             ^
+pyvmi.c:1331:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = RSI;
+             ^
+pyvmi.c:1335:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = RDI;
+             ^
+pyvmi.c:1339:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = RSP;
+             ^
+pyvmi.c:1342:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = R8;
+             ^
+pyvmi.c:1345:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = R9;
+             ^
+pyvmi.c:1349:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = R10;
+             ^
+pyvmi.c:1353:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = R11;
+             ^
+pyvmi.c:1357:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = R12;
+             ^
+pyvmi.c:1361:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = R13;
+             ^
+pyvmi.c:1365:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = R14;
+             ^
+pyvmi.c:1369:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = R15;
+             ^
+pyvmi.c:1373:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = RIP;
+             ^
+pyvmi.c:1377:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = RFLAGS;
+             ^
+pyvmi.c:1381:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = CR0;
+             ^
+pyvmi.c:1385:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = CR2;
+             ^
+pyvmi.c:1389:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = CR3;
+             ^
+pyvmi.c:1393:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = CR4;
+             ^
+pyvmi.c:1397:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = DR0;
+             ^
+pyvmi.c:1401:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = DR1;
+             ^
+pyvmi.c:1405:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = DR2;
+             ^
+pyvmi.c:1409:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = DR3;
+             ^
+pyvmi.c:1413:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = DR6;
+             ^
+pyvmi.c:1417:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = DR7;
+             ^
+pyvmi.c:1421:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = CS_SEL;
+             ^
+pyvmi.c:1425:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = DS_SEL;
+             ^
+pyvmi.c:1429:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = ES_SEL;
+             ^
+pyvmi.c:1433:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = FS_SEL;
+             ^
+pyvmi.c:1437:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = GS_SEL;
+             ^
+pyvmi.c:1441:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = SS_SEL;
+             ^
+pyvmi.c:1445:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = TR_SEL;
+             ^
+pyvmi.c:1449:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = LDTR_SEL;
+             ^
+pyvmi.c:1453:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = CS_LIMIT;
+             ^
+pyvmi.c:1457:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = DS_LIMIT;
+             ^
+pyvmi.c:1461:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = ES_LIMIT;
+             ^
+pyvmi.c:1465:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = FS_LIMIT;
+             ^
+pyvmi.c:1469:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = GS_LIMIT;
+             ^
+pyvmi.c:1473:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = SS_LIMIT;
+             ^
+pyvmi.c:1477:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = TR_LIMIT;
+             ^
+pyvmi.c:1481:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = LDTR_LIMIT;
+             ^
+pyvmi.c:1485:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = IDTR_LIMIT;
+             ^
+pyvmi.c:1489:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = GDTR_LIMIT;
+             ^
+pyvmi.c:1493:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = CS_BASE;
+             ^
+pyvmi.c:1497:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = DS_BASE;
+             ^
+pyvmi.c:1501:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = ES_BASE;
+             ^
+pyvmi.c:1505:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = FS_BASE;
+             ^
+pyvmi.c:1509:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = GS_BASE;
+             ^
+pyvmi.c:1513:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = SS_BASE;
+             ^
+pyvmi.c:1517:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = TR_BASE;
+             ^
+pyvmi.c:1521:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = LDTR_BASE;
+             ^
+pyvmi.c:1525:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = IDTR_BASE;
+             ^
+pyvmi.c:1529:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = GDTR_BASE;
+             ^
+pyvmi.c:1533:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = CS_ARBYTES;
+             ^
+pyvmi.c:1537:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = DS_ARBYTES;
+             ^
+pyvmi.c:1541:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = ES_ARBYTES;
+             ^
+pyvmi.c:1545:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = FS_ARBYTES;
+             ^
+pyvmi.c:1549:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = GS_ARBYTES;
+             ^
+pyvmi.c:1553:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = SS_ARBYTES;
+             ^
+pyvmi.c:1557:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = TR_ARBYTES;
+             ^
+pyvmi.c:1561:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = LDTR_ARBYTES;
+             ^
+pyvmi.c:1565:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = SYSENTER_CS;
+             ^
+pyvmi.c:1569:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = SYSENTER_ESP;
+             ^
+pyvmi.c:1573:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = SYSENTER_EIP;
+             ^
+pyvmi.c:1577:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = SHADOW_GS;
+             ^
+pyvmi.c:1581:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = MSR_FLAGS;
+             ^
+pyvmi.c:1585:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = MSR_LSTAR;
+             ^
+pyvmi.c:1589:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = MSR_CSTAR;
+             ^
+pyvmi.c:1593:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = MSR_SYSCALL_MASK;
+             ^
+pyvmi.c:1597:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = MSR_EFER;
+             ^
+pyvmi.c:1601:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = MSR_TSC_AUX;
+             ^
+pyvmi.c:1605:13: error: incompatible types when assigning to type ‘registers_t {aka struct registers}’ from type ‘int’
+         reg = TSC;
+             ^
+pyvmi.c:1612:59: error: incompatible type for argument 3 of ‘vmi_get_vcpureg’
+     if (VMI_FAILURE == vmi_get_vcpureg(vmi(self), &value, reg, vcpu)) {
+                                                           ^
+In file included from pyvmi.c:31:0:
+/usr/local/include/libvmi/libvmi.h:1901:10: note: expected ‘reg_t {aka long unsigned int}’ but argument is of type ‘registers_t {aka struct registers}’
+ status_t vmi_get_vcpureg(
+          ^
+pyvmi.c: In function ‘pyvmi_v2pcache_flush’:
+pyvmi.c:1905:5: error: too few arguments to function ‘vmi_v2pcache_flush’
+     vmi_v2pcache_flush(vmi(self));
+     ^
+In file included from pyvmi.c:31:0:
+/usr/local/include/libvmi/libvmi.h:1990:6: note: declared here
+ void vmi_v2pcache_flush(
+      ^
+error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+
+
+其实是registers_t类有问题，参照
+https://github.com/libvmi/libvmi/issues/456
+https://github.com/libvmi/libvmi/pull/454
+有人提交了代码修改
+https://github.com/libvmi/libvmi/pull/454/commits/ae49ee4e34c4850491b03ec954e23866183ffcf3
+
+-    reg_t value;
+ -    registers_t reg;
+ +    reg_t reg = 0, value = 0;
+
+
+
+   PyObject * self,
+      PyObject * args)
+  {
+ -    vmi_v2pcache_flush(vmi(self));
+ +    addr_t dtb;
+ +    if (!PyArg_ParseTuple(args, "K", &dtb)) {
+ +        PyErr_SetString(PyExc_ValueError,
+ +                        "Invalid argument(s) to function");
+ +        return NULL;
+ +    }
+ +
+ +    vmi_v2pcache_flush(vmi(self), dtb);
+      return Py_BuildValue("");   // return None
+  }
+
+
+修改后成功build and install
+
+root@dyf:/home/dyf/Downloads/libvmi-master/tools/pyvmi# python setup.py build
+running build
+running build_ext
+building 'pyvmi' extension
+x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/usr/local/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/python2.7 -c pyvmi.c -o build/temp.linux-x86_64-2.7/pyvmi.o -I/usr/local/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+pyvmi.c: In function ‘pyvmi_init’:
+pyvmi.c:181:54: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+         char *domidstring = malloc(snprintf(NULL, 0, "domid-%u", domid)+1);
+                                                      ^
+pyvmi.c:181:54: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 4 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+pyvmi.c:182:30: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘uint64_t {aka long unsigned int}’ [-Wformat=]
+         sprintf(domidstring, "domid-%u", domid);
+                              ^
+creating build/lib.linux-x86_64-2.7
+x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z,relro -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security build/temp.linux-x86_64-2.7/pyvmi.o -L/usr/local/lib -lglib-2.0 -ljson-c -lm -ldl -lvmi -o build/lib.linux-x86_64-2.7/pyvmi.so
+root@dyf:/home/dyf/Downloads/libvmi-master/tools/pyvmi# python setup.py install
+running install
+running build
+running build_ext
+running install_lib
+copying build/lib.linux-x86_64-2.7/pyvmi.so -> /usr/local/lib/python2.7/dist-packages
+running install_egg_info
+Writing /usr/local/lib/python2.7/dist-packages/PyVmi-1.1.egg-info
+

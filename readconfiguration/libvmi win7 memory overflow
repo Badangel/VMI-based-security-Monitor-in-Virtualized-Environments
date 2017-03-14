@@ -1,0 +1,31 @@
+ libvmi/driver/kvm/kvm.c 
+{
+      int offset;
+      char *ptr, *tmp_ptr;
+ -    char keyword[4] = { [0 ... 3] = '\0' };
+ +    char keyword[5] = { [0 ... 4] = '\0' };
+  
+      if (NULL == ir_output || NULL == regname) {
+          return 0;
+
+
+
+
+
+
+root@dyf:/home/dyf/Downloads/libvmi-master/examples# vmi-process-list win7ult
+*** buffer overflow detected ***: vmi-process-list terminated
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x77725)[0x7fa4729d7725]
+/lib/x86_64-linux-gnu/libc.so.6(__fortify_fail+0x5c)[0x7fa472a7889c]
+/lib/x86_64-linux-gnu/libc.so.6(+0x1168a0)[0x7fa472a768a0]
+/lib/x86_64-linux-gnu/libc.so.6(__strcat_chk+0x5d)[0x7fa472a75bad]
+/usr/local/lib/libvmi-0.11.so(+0x60ef)[0x7fa472d2f0ef]
+/usr/local/lib/libvmi-0.11.so(+0x6bd1)[0x7fa472d2fbd1]
+/usr/local/lib/libvmi-0.11.so(+0x96c8)[0x7fa472d326c8]
+/usr/local/lib/libvmi-0.11.so(+0x9e71)[0x7fa472d32e71]
+/usr/local/lib/libvmi-0.11.so(+0x7e10)[0x7fa472d30e10]
+/usr/local/lib/libvmi-0.11.so(+0xe7aa)[0x7fa472d377aa]
+vmi-process-list[0x400ba6]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7fa472980830]
+vmi-process-list[0x400e89]

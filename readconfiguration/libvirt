@@ -1,0 +1,38 @@
+http://blog.csdn.net/ThomasWangqiang/article/details/54098350
+
+apt-get install libyajl-dev libxml2-dev libdevmapper-dev  libpciaccess-dev libnl-3-dev libnl-route-3-dev uuid
+
+
+./configure --prefix=/usr --localstatedir=/var --sysconfdir=/etc
+make
+make install
+ldconfig 
+apt-get install virt-manager
+
+/usr/lib覆盖原文件用：
+rm libvirt.so.0  
+rm libvirt-admin.so.0 
+rm libvirt-lxc.so.0
+rm libvirt-qemu.so.0
+ln -s libvirt.so.0.2004.0 libvirt.so.0
+ln -s libvirt-lxc.so.0.2004.0 libvirt-lxc.so.0
+ln -s libvirt-qemu.so.0.2004.0 libvirt-qemu.so.0
+ln -s libvirt-admin.so.0.2004.0 libvirt-admin.so.0
+-s对源文件建立链接非硬链接
+-f强行建立文件或目录链接
+之前的-sf经常失效
+
+/etc/libvirt/qemu配置文件添加
+<memballoon model="virtio">
+    <stats period="1"/>
+</memballoon>
+
+win8驱动balloon服务要更改属性中允许本地和远程桌面使用！
+
+ 出现：
+error: failed to connect to the hypervisor
+error: Failed to connect socket to '/var/run/libvirt/libvirt-sock': No such file or directory
+可能是没启动进程 libvirtd  -d
+virtlogd-sock' No such file or directory'
+libvirtError: Failed to connect socket to '/var/run/libvirt/virtlogd-sock': Connection refused
+virtlogd -d

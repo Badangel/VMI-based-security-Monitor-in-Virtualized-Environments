@@ -1,0 +1,23 @@
+
+apt-get install kvm qemu libvirt-bin virtinst virt-manager virt-viewer
+装ubuntu16.04：qemu-system-x86_64 -enable-kvm -hda /home/dyf/Downloads/vm/ubuntu1604.img -cdrom /home/dyf/Downloads/iso/ubuntu-16.04-desktop-amd64.iso -boot d -m 1024
+运行ubuntuvm：qemu-system-x86_64 -k en-us -balloon virtio -enable-kvm -m 1024 -hda /home/dyf/Downloads/vm/ubuntu1604.img
+装win7：qemu-system-x86_64 -enable-kvm -hda /home/dyf/Downloads/vm/win7.img -cdrom /home/dyf/Downloads/iso/cn_windows_7_enterprise_with_sp1_x64_dvd_u_677685.iso -boot d -m 1024 -vga cirrus
+
+运行win7：qemu-system-x86_64 -enable-kvm -m 1024 -hda /home/dyf/Downloads/vm/win7.img -usb -usbdevice tablet -vga cirrus -k en-us
+
+
+装win8：qemu-system-x86_64 -enable-kvm -hda /home/dyf/Downloads/vm/win8.img -cdrom /home/dyf/Downloads/iso/GHOST_WIN8.1_X64_pro.iso -boot d -m 1024 -vga cirrus
+
+运行win8：qemu-system-x86_64 -enable-kvm -m 1024 -hda /home/dyf/Downloads/vm/win8.img -usb -usbdevice tablet -vga cirrus -k en-us
+
+qemu-system-x86_64 -enable-kvm -m 1024 -hda /home/dyf/Downloads/vm/win8.img -drive file=/home/dyf/Downloads/iso/virtio-win-0.1.126.iso,media=cdrom,index=1 -usb -usbdevice tablet -vga cirrus -k en-us
+
+qemu-img create -f qcow2 win7ult.img 20G
+
+装win7ult：qemu-system-x86_64 -enable-kvm -hda /home/dyf/Downloads/vm/win7ult.img -cdrom /home/dyf/Downloads/iso/cn_windows_7_ultimate_with_sp1_x86_dvd_u_677486.iso -boot d -m 1024 -vga cirrus -usb -usbdevice tablet
+
+运行win7ult：qemu-system-x86_64 -enable-kvm -m 1024 -hda /home/dyf/Downloads/vm/win7ult.img -drive file=/home/dyf/Downloads/iso/virtio-win-0.1.126.iso,media=cdrom,index=1 -usb -usbdevice tablet -vga cirrus -k en-us
+
+
+
