@@ -1,0 +1,19 @@
+This project is based on KVM-QEMU platform on Ubuntu 16.04 LTS os. It can get some monitor on the host without the agent in the guest VM.Depend on the package as follow:
+QEMU:2.4.0
+libvirt:2.4.0
+vit-manager:1.3.2
+libvmi and pyvmi
+---------------------------------------------------------------------
+
+Supports:
+It can work well on Ubuntu 16.04 LTS and windows 7 ult, they are 64 bit.
+
+----------------------------------------------------------------------
+
+The states monitor of VM:
+monitor.py
+It can get usage rate of memory,CPU and disk about all the VM on the qemu(manage by the virt-manage). The IO about net and disk also can be got.
+
+-----------------------------------------------------------------------
+There will provide monitor about process/module/net/disk.
+to be continued... 
